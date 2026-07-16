@@ -138,4 +138,8 @@ jobs:
         run: ../scripts/terraform-init.sh
 
       - name: Terraform Plan
-        run: terraform plan -input=false
+        run: |
+          terraform plan \
+            -input=false \
+            -var="owner=${{ secrets.AZURE_OWNER }}" \
+            -var="resource_group_name=aelouadiRG"

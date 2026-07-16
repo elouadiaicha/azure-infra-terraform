@@ -57,13 +57,24 @@ jobs:
         run: |
           case "${{ github.event.inputs.action }}" in
             plan)
-              terraform plan -input=false
+              terraform plan \
+                -input=false \
+                -var="owner=${{ secrets.AZURE_OWNER }}" \
+                -var="resource_group_name=aelouadiRG"
               ;;
             apply)
-              terraform apply -auto-approve -input=false
+              terraform apply \
+                -auto-approve \
+                -input=false \
+                -var="owner=${{ secrets.AZURE_OWNER }}" \
+                -var="resource_group_name=aelouadiRG"
               ;;
             destroy)
-              terraform destroy -auto-approve -input=false
+              terraform destroy \
+                -auto-approve \
+                -input=false \
+                -var="owner=${{ secrets.AZURE_OWNER }}" \
+                -var="resource_group_name=aelouadiRG"
               ;;
             *)
               echo "Invalid action"
