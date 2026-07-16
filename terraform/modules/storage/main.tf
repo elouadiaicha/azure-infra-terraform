@@ -38,17 +38,17 @@ resource "azurerm_storage_container" "api_config" {
 #
 # Documentation : https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account
 
- #resource "azurerm_storage_account" "sa" {
- #  name                            = "st${replace(var.owner, "-", "")}tf"
-  # resource_group_name             = var.resource_group_name
-  # location                        = var.location
-  # account_tier                    = "Standard"
-  # account_replication_type        = "LRS"
-  #account_kind                    = "StorageV2"
-  # min_tls_version                 = "TLS1_2"
-  # allow_nested_items_to_be_public = true   # true pour permettre api-config public
-  # tags                            = var.tags
- #}
+#resource "azurerm_storage_account" "sa" {
+#  name                            = "st${replace(var.owner, "-", "")}tf"
+# resource_group_name             = var.resource_group_name
+# location                        = var.location
+# account_tier                    = "Standard"
+# account_replication_type        = "LRS"
+#account_kind                    = "StorageV2"
+# min_tls_version                 = "TLS1_2"
+# allow_nested_items_to_be_public = true   # true pour permettre api-config public
+# tags                            = var.tags
+#}
 
 # TODO (2/3) : conteneur privé pour les logs API
 #
@@ -57,7 +57,7 @@ resource "azurerm_storage_container" "api_config" {
 
 # resource "azurerm_storage_container" "api_logs" {
 #   name                  = api-logs
-#   storage_account_id    = 
+#   storage_account_id    =
 #   container_access_type = private
 # }
 
