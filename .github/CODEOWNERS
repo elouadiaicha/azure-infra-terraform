@@ -1,0 +1,14 @@
+# Propriétaire par défaut du dépôt
+* @elouadiaicha
+
+# Workflows GitHub Actions
+/.github/workflows/ @elouadiaicha
+
+# Configuration Terraform
+/terraform/ @elouadiaicha
+
+# Scripts
+/scripts/ @elouadiaicha
+
+# Documentation
+/README.md @elouadiaicha
